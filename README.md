@@ -29,3 +29,9 @@ public/images/         showcase/, about/, projects/
 - 5 ô ảnh dưới hero: `showcaseImages`
 - 6 project: `projects`
 - File CV: đặt `public/cv.pdf`
+
+## Deploy
+
+Live: https://arthurtran12.github.io/binhhd/
+
+Mỗi lần `git push` lên nhánh `main`, GitHub Actions (`.github/workflows/deploy.yml`) tự build và deploy lại.
