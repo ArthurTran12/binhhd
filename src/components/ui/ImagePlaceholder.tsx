@@ -1,6 +1,5 @@
 import Image from "next/image";
-
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+import { asset } from "@/lib/asset";
 
 type Props = {
   src?: string;
@@ -21,7 +20,7 @@ export default function ImagePlaceholder({ src, alt, className = "", sizes = "10
   return (
     <div className={`relative overflow-hidden ${src ? "" : "bg-surface-2"} ${className}`}>
       {src ? (
-        <Image src={src.startsWith("/") ? basePath + src : src} alt={alt} fill sizes={sizes} priority={priority} className={fit === "contain" ? "object-contain" : "object-cover"} />
+        <Image src={asset(src)} alt={alt} fill sizes={sizes} priority={priority} className={fit === "contain" ? "object-contain" : "object-cover"} />
       ) : (
         <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 border border-dashed border-line text-muted">
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden>

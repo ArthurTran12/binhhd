@@ -3,7 +3,12 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import ImagePlaceholder from "@/components/ui/ImagePlaceholder";
 import Button from "@/components/ui/Button";
 import IconGroup, { iconCircle } from "@/components/ui/IconGroup";
-import { ArrowRight, GlowStar, Mail, Phone, SocialIcon } from "@/components/ui/Icons";
+import Image from "next/image";
+import { asset } from "@/lib/asset";
+import { ArrowRight, Mail, Phone, SocialIcon } from "@/components/ui/Icons";
+
+/** Icon ngôi sao (public/svgs/ic_star.svg) cạnh tiêu đề card */
+const StarIcon = () => <Image src={asset("/svgs/ic_star.svg")} alt="" width={20} height={20} className="h-5 w-auto" />;
 
 export function ContactInfo() {
   return (
@@ -80,13 +85,13 @@ export default function About() {
         <div className="rounded-xl border border-line bg-surface">
           <div className="p-6 md:p-8">
             <h3 className="mb-4 flex items-center gap-2.5 text-lg lg:text-xl">
-              <GlowStar /> Introduction
+              <StarIcon /> Introduction
             </h3>
             <p className="text-[13px] leading-relaxed text-muted">{profile.intro}</p>
           </div>
           <div className="border-t border-line p-6 md:p-8">
             <h3 className="mb-5 flex items-center gap-2.5 text-lg lg:text-xl">
-              <GlowStar /> Contact Information
+              <StarIcon /> Contact Information
             </h3>
             <ContactInfo />
           </div>
