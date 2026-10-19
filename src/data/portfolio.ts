@@ -90,6 +90,49 @@ export const experiences: Experience[] = [
       },
     ],
   },
+  {
+    company: "REDDOT Technology Company",
+    period: "2023 - 2024",
+    summary:
+      "Served as Senior UI/UX Designer, taking charge of end-to-end design execution and business process analysis. Led the research, feature architecture, and product design for digital banking transformation initiatives and cryptocurrency/digital currency platforms, bridging complex financial logic into intuitive, secure user experiences.",
+    projects: [
+      {
+        title: "Foundation - Digital Currency & Crypto Asset Management Platform",
+        description:
+          "Spearheaded the UI/UX architecture and business requirement analysis for Foundation, a digital currency trading and crypto asset management platform. Designed robust financial workflows, secure digital wallet interfaces, real-time market data visualization, and seamless transaction execution systems to ensure a highly intuitive and trusted user experience for cryptocurrency investors.",
+      },
+      {
+        title: "InSolution - Digital Vehicle & Travel Insurance Platform",
+        description:
+          "Led the UI/UX design and business analysis for InSolution, an end-to-end digital insurance platform specializing in vehicle (auto/motorcycle) and travel insurance. Streamlined complex policy purchasing flows, instant quote calculations, and customized coverage options. Designed intuitive online claims submission portals and automated policy issuance systems, delivering a fast, transparent, and frictionless buying experience.",
+      },
+    ],
+  },
+  {
+    company: "Nexrise Technology Company",
+    period: "2022 - 2023",
+    summary:
+      "Served as Junior UI/UX Designer, collaborating on end-to-end design solutions for e-commerce and edtech platforms. Responsible for creating wireframes, interactive prototypes, and UI components, while optimizing digital storefronts, product catalogs, and online course learning flows to deliver engaging, user-friendly experiences.",
+    projects: [
+      {
+        title: "Ecomdex - Crypto-Enabled E-Commerce Platform",
+        description:
+          "Collaborated as a Junior UI/UX Designer on Ecomdex, an innovative e-commerce platform integrating digital currency and cryptocurrency payment gateways. Designed intuitive product discovery workflows, streamlined checkout systems supporting crypto transactions, and user-friendly wallet integration interfaces to bridge traditional online shopping with decentralized finance.",
+      },
+      {
+        title: "Clicksale - Multi-Subject E-Learning & Course Sales Platform",
+        description:
+          "Contributed as a Junior UI/UX Designer to Clicksale, an all-in-one educational platform offering multi-subject course packages and learning management tools for teachers and students. Designed clean course catalog layouts, seamless package purchasing/subscription flows, interactive student learning dashboards, and efficient classroom management tools for educators.",
+      },
+    ],
+  },
+  {
+    company: "Avitex Technology Company",
+    period: "2021 - 2022",
+    summary:
+      "Served as Fresher UI/UX Designer, focusing on designing high-quality Web and Mobile App templates for ThemeForest. Responsible for researching market design trends, creating modern UI layouts, responsive Web/App templates, and building component-based design systems tailored for commercial marketplace standards.",
+    projects: [],
+  },
   // Thêm công ty khác ở đây — nút ‹ › sẽ chuyển giữa các mục
 ];
 
@@ -99,11 +142,16 @@ export type Project = {
   href: string;
 };
 
+/** Trang danh sách project trên Behance (nút "View All Works") */
+export const allWorksUrl = "https://www.behance.net/hoangbinh21/projects";
+
+const behance = (path: string) => `https://www.behance.net/gallery/${path}`;
+
 export const projects: Project[] = [
-  { title: "Project & Task Management Dashboard", image: "/images/projects/1.png", href: "#" },
-  { title: "Work Mate - UI HR Management & Task Management", image: "/images/projects/2.png", href: "#" },
-  { title: "Fonoforge - AI Voice & Video Generator App UI", image: "/images/projects/3.png", href: "#" },
-  { title: "ActiveStep - Step Tracker App UX Case Study", image: "/images/projects/4.png", href: "#" },
-  { title: "Alipay - EWallet App Figma Template", image: "/images/projects/5.png", href: "#" },
-  { title: "Modavo - Multipurpose WooCommerce", image: "/images/projects/6.png", href: "#" },
+  { title: "Project & Task Management Dashboard", image: "/images/projects/1.png", href: behance("219180865/Project-Task-Management-Dashboard-UI-KIT") },
+  { title: "Work Mate - UI HR Management & Task Management", image: "/images/projects/2.png", href: behance("212559635/Work-Mate-UI-HR-Management-Task-Management") },
+  { title: "Fonoforge - AI Voice & Video Generator App UI", image: "/images/projects/3.png", href: behance("197692081/AI-Voice-Video-Generator-App-UI") },
+  { title: "ActiveStep - Step Tracker App UX Case Study", image: "/images/projects/4.png", href: behance("212560497/ActiveStep-Step-Traker-App-UX-Case-Study") },
+  { title: "Alipay - EWallet App Figma Template", image: "/images/projects/5.png", href: allWorksUrl /* chưa có trên Behance */ },
+  { title: "Modavo - Multipurpose WooCommerce", image: "/images/projects/6.png", href: behance("219275461/Multipurpose-WooCommerce") },
 ];

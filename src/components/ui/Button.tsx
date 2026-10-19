@@ -15,8 +15,10 @@ export default function Button({ href, children, variant = "solid", className = 
     variant === "solid"
       ? "bg-surface-2 text-white/90 hover:bg-[#232327] hover:text-white"
       : "border border-line text-white/80 hover:border-white/40 hover:text-white";
+  // Link ngoài (http...) mở tab mới
+  const external = href.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {};
   return (
-    <Link href={href} download={download} className={`${base} ${styles} ${className}`}>
+    <Link href={href} download={download} className={`${base} ${styles} ${className}`} {...external}>
       {children}
     </Link>
   );

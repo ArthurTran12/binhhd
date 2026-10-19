@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { projects } from "@/data/portfolio";
+import { allWorksUrl, projects } from "@/data/portfolio";
 import SectionHeading from "@/components/ui/SectionHeading";
 import ImagePlaceholder from "@/components/ui/ImagePlaceholder";
 import Button from "@/components/ui/Button";
@@ -22,7 +22,7 @@ export default function Projects() {
         eyebrow="Portfolio"
         title="Explore My Selected Projects."
         action={
-          <Button href="#projects">
+          <Button href={allWorksUrl}>
             View All Works <ArrowRight />
           </Button>
         }
@@ -30,7 +30,7 @@ export default function Projects() {
 
       <div className="mt-10 grid gap-x-6 gap-y-10 md:mt-[60px] lg:gap-x-9 lg:gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
         {projects.map((p, i) => (
-          <Link key={p.title} href={p.href} className={`group block ${i === index ? "" : "max-sm:hidden"}`}>
+          <Link key={p.title} href={p.href} target="_blank" rel="noopener noreferrer" className={`group block ${i === index ? "" : "max-sm:hidden"}`}>
             <ImagePlaceholder
               src={p.image}
               alt={p.title}
