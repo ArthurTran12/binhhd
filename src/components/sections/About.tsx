@@ -8,7 +8,15 @@ import { asset } from "@/lib/asset";
 import { ArrowRight, Mail, Phone, SocialIcon } from "@/components/ui/Icons";
 
 /** Icon ngôi sao (public/svgs/ic_star.svg) cạnh tiêu đề card */
-const StarIcon = () => <Image src={asset("/svgs/ic_star.svg")} alt="" width={20} height={20} className="h-5 w-auto" />;
+const StarIcon = () => (
+  <Image
+    src={asset("/svgs/ic_star.svg")}
+    alt=""
+    width={20}
+    height={20}
+    className="h-5 w-auto"
+  />
+);
 
 export function ContactInfo() {
   return (
@@ -18,7 +26,10 @@ export function ContactInfo() {
           <p className="mb-2 flex items-center gap-1.5 text-white/70">
             <Mail /> Email
           </p>
-          <a href={`mailto:${profile.email}`} className="break-all text-white/80 hover:text-white">
+          <a
+            href={`mailto:${profile.email}`}
+            className="break-all text-white/80 hover:text-white"
+          >
             {profile.email}
           </a>
         </div>
@@ -26,7 +37,10 @@ export function ContactInfo() {
           <p className="mb-2 flex items-center gap-1.5 text-white/70">
             <Phone /> Phone Number
           </p>
-          <a href={`tel:${profile.phone.replace(/\s/g, "")}`} className="text-white/80 hover:text-white">
+          <a
+            href={`tel:${profile.phone.replace(/\s/g, "")}`}
+            className="text-white/80 hover:text-white"
+          >
             {profile.phone}
           </a>
         </div>
@@ -34,15 +48,27 @@ export function ContactInfo() {
       <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
         <IconGroup className="self-center sm:mr-auto max-sm:mb-2">
           {profile.socials.map((s) => (
-            <a key={s.label} href={s.href} aria-label={s.label} className={iconCircle}>
+            <a
+              key={s.label}
+              href={s.href}
+              aria-label={s.label}
+              className={iconCircle}
+            >
               <SocialIcon name={s.icon} />
             </a>
           ))}
         </IconGroup>
-        <Button href="#contact" className="w-full sm:w-auto sm:min-w-[120px] lg:min-w-[150px]">
+        <Button
+          href="#contact"
+          className="w-full sm:w-auto sm:min-w-[120px] lg:min-w-[150px]"
+        >
           Let&apos;s Work
         </Button>
-        <Button href={profile.cvUrl} className="w-full sm:w-auto sm:min-w-[120px] lg:min-w-[150px]" download>
+        <Button
+          href={profile.cvUrl}
+          className="w-full sm:w-auto sm:min-w-[120px] lg:min-w-[150px]"
+          download
+        >
           Download CV
         </Button>
       </div>
@@ -52,7 +78,10 @@ export function ContactInfo() {
 
 export default function About() {
   return (
-    <section id="about" className="container-page pt-16 pb-12 md:pt-[100px] md:pb-[50px]">
+    <section
+      id="about"
+      className="container-page pt-16 pb-12 md:pt-[100px] md:pb-[50px]"
+    >
       <SectionHeading
         eyebrow="About"
         title={profile.headline}
@@ -75,19 +104,27 @@ export default function About() {
           />
           {!profile.avatar && (
             <>
-              <div aria-hidden className="pointer-events-none absolute -top-px -left-px h-20 w-20 rounded-br-[60px] border-r-[14px] border-b-[14px] border-bg" />
-              <div aria-hidden className="pointer-events-none absolute -right-px -bottom-px h-20 w-20 rounded-tl-[60px] border-t-[14px] border-l-[14px] border-bg" />
+              <div
+                aria-hidden
+                className="pointer-events-none absolute -top-px -left-px h-20 w-20 rounded-br-[60px] border-r-[14px] border-b-[14px] border-bg"
+              />
+              <div
+                aria-hidden
+                className="pointer-events-none absolute -right-px -bottom-px h-20 w-20 rounded-tl-[60px] border-t-[14px] border-l-[14px] border-bg"
+              />
             </>
           )}
         </div>
 
         {/* 1 card, 2 phần ngăn bằng đường kẻ */}
-        <div className="rounded-xl border border-line bg-surface">
+        <div className="rounded-xl border border-line">
           <div className="p-6 md:p-8">
             <h3 className="mb-4 flex items-center gap-2.5 text-lg lg:text-xl">
               <StarIcon /> Introduction
             </h3>
-            <p className="text-[13px] leading-relaxed text-muted">{profile.intro}</p>
+            <p className="text-[13px] leading-relaxed text-muted">
+              {profile.intro}
+            </p>
           </div>
           <div className="border-t border-line p-6 md:p-8">
             <h3 className="mb-5 flex items-center gap-2.5 text-lg lg:text-xl">

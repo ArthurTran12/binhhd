@@ -10,9 +10,9 @@ export function LetsWorkTogether({ className = "" }: { className?: string }) {
         <Link
           href="#contact"
           aria-label="Contact"
-          className="inline-flex h-8 w-16 items-center justify-center rounded-full bg-accent transition-colors hover:bg-accent-soft md:h-10 md:w-[76px]"
+          className="group inline-flex h-8 w-16 animate-glow-pulse items-center justify-center rounded-full bg-accent transition-colors hover:bg-accent-soft md:h-10 md:w-[76px]"
         >
-          <ArrowUpRight className="h-4 w-4 md:h-5 md:w-5" />
+          <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 md:h-5 md:w-5" />
         </Link>
       </div>
       <div>Work Together</div>

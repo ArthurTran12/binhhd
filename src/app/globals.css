@@ -16,6 +16,25 @@
   --animate-marquee: marquee 40s linear infinite;
   --animate-marquee-slow: marquee 60s linear infinite reverse; /* chạy ngược: trái → phải */
 
+  --animate-glow-pulse: glow-pulse 2s ease-in-out infinite;
+
+  /* Nút tím "bập bùng": quầng sáng to/nhỏ và sáng/tối luân phiên */
+  @keyframes glow-pulse {
+    0%,
+    100% {
+      box-shadow:
+        0 0 0 0 rgba(85, 70, 255, 0.55),
+        0 0 12px 0 rgba(138, 125, 255, 0.35);
+      filter: brightness(1);
+    }
+    50% {
+      box-shadow:
+        0 0 0 8px rgba(85, 70, 255, 0),
+        0 0 26px 4px rgba(138, 125, 255, 0.6);
+      filter: brightness(1.15);
+    }
+  }
+
   @keyframes marquee {
     from {
       transform: translateX(0);
@@ -52,4 +71,10 @@ body {
 .text-outline {
   color: transparent;
   -webkit-text-stroke: 1px rgba(255, 255, 255, 0.12);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-glow-pulse {
+    animation: none;
+  }
 }
