@@ -9,13 +9,15 @@ export default function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-line bg-bg/80 backdrop-blur">
-      <div className="container-page flex h-16 items-center justify-between">
-        <Link href="/" className="text-sm font-medium tracking-wide">
+    <header className="sticky top-0 z-50 border-b border-line bg-bg">
+      {/* Đường kẻ dọc 2 bên như design (desktop) */}
+      <div className="mx-auto max-w-[1264px] md:border-x md:border-line">
+      <div className="container-page flex h-16 items-center justify-between md:h-[88px]">
+        <Link href="/" className="text-base font-medium tracking-wide md:text-xl">
           {profile.brand}
         </Link>
 
-        <Button href="#contact" variant="solid" className="max-md:hidden">
+        <Button href="#contact" className="px-5 py-3 max-md:hidden">
           Contact Me
         </Button>
 
@@ -31,6 +33,7 @@ export default function Header() {
             {open ? <path d="M6 6l12 12M18 6 6 18" /> : <path d="M4 7h16M4 12h16M10 17h10" />}
           </svg>
         </button>
+      </div>
       </div>
 
       {/* Mobile: menu xổ xuống */}

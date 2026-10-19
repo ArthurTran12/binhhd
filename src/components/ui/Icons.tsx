@@ -57,3 +57,10 @@ export const SocialIcon = ({ name, className = "h-3.5 w-3.5" }: IconProps & { na
     </svg>
   );
 };
+
+/** Ngôi sao 4 cánh tím có glow (dùng ở marquee và tiêu đề card) */
+export const GlowStar = ({ className = "h-3.5 w-3.5" }: IconProps) => (
+  <svg viewBox="0 0 24 24" fill="currentColor" className={`text-accent-soft drop-shadow-[0_0_5px_rgba(138,125,255,0.9)] ${className}`} aria-hidden>
+    <path d="M12 1c.5 5.6 5.4 10.5 11 11-5.6.5-10.5 5.4-11 11-.5-5.6-5.4-10.5-11-11C6.6 11.5 11.5 6.6 12 1Z" />
+  </svg>
+);

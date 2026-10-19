@@ -4,13 +4,13 @@ import { ArrowUpRight } from "@/components/ui/Icons";
 
 export function LetsWorkTogether({ className = "" }: { className?: string }) {
   return (
-    <div className={`text-2xl leading-tight font-medium uppercase md:text-4xl ${className}`}>
+    <div className={`text-[28px] leading-[1.35] font-medium uppercase md:text-[36px] lg:text-[44px] ${className}`}>
       <div className="flex items-center gap-3">
         <span>Let&apos;s</span>
         <Link
           href="#contact"
           aria-label="Contact"
-          className="inline-flex h-8 w-16 items-center justify-center rounded-full bg-accent transition-colors hover:bg-accent-soft md:h-10 md:w-20"
+          className="inline-flex h-8 w-16 items-center justify-center rounded-full bg-accent transition-colors hover:bg-accent-soft md:h-10 md:w-[76px]"
         >
           <ArrowUpRight className="h-4 w-4 md:h-5 md:w-5" />
         </Link>
@@ -20,24 +20,27 @@ export function LetsWorkTogether({ className = "" }: { className?: string }) {
   );
 }
 
+/** Nhóm vòng tròn đồng tâm; chỉ nửa trong khung được nhìn thấy */
+function Rings({ className }: { className: string }) {
+  return (
+    <svg viewBox="0 0 300 300" fill="none" aria-hidden className={`pointer-events-none absolute left-1/2 h-[300px] w-[300px] -translate-x-1/2 ${className}`}>
+      {[140, 104, 68].map((r) => (
+        <circle key={r} cx="150" cy="150" r={r} stroke="white" strokeOpacity="0.035" strokeWidth="18" />
+      ))}
+    </svg>
+  );
+}
+
 export default function Hero() {
   return (
     <section className="relative overflow-hidden">
-      {/* Vòng tròn đồng tâm trang trí */}
-      <div aria-hidden className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-        {[160, 260, 360].map((s) => (
-          <div
-            key={s}
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border-[18px] border-white/[0.03]"
-            style={{ width: s, height: s }}
-          />
-        ))}
-      </div>
+      <Rings className="-top-[150px]" />
+      <Rings className="-bottom-[150px]" />
 
-      <div className="container-page relative flex flex-col gap-6 py-10 md:flex-row md:items-center md:justify-between md:py-20">
+      <div className="container-page relative flex flex-col gap-6 py-10 md:flex-row md:items-center md:justify-between md:py-[78px]">
         <div>
           <p className="mb-3 text-[11px] tracking-widest text-muted uppercase">{profile.role}</p>
-          <h1 className="text-3xl font-semibold tracking-tight md:text-5xl">{profile.name}</h1>
+          <h1 className="text-3xl font-semibold tracking-tight md:text-[44px] lg:text-[58px]">{profile.name}</h1>
         </div>
         <LetsWorkTogether />
       </div>

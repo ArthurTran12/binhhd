@@ -64,7 +64,7 @@ export type Experience = {
 export const experiences: Experience[] = [
   {
     company: "CHTLAB Technology Research and Development Joint Stock Company",
-    period: "2024 - 2025",
+    period: "2024 - 2026",
     summary:
       "Served as a Senior UI/UX Designer, leading the design team in developing both client outsourcing projects and in-house products. Responsible for end-to-end design execution, establishing design standards, and mentoring team members to deliver high-quality digital experiences.",
     projects: [

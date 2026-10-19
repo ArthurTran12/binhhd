@@ -1,7 +1,7 @@
 export default function BigName() {
   return (
-    <div aria-hidden className="overflow-hidden py-6 select-none">
-      <p className="text-center text-[22vw] leading-none font-semibold tracking-tight whitespace-nowrap text-white/[0.06]">
+    <div aria-hidden className="overflow-hidden pt-10 pb-8 select-none md:pt-16">
+      <p className="text-center text-[16vw] leading-[0.8] font-medium tracking-tight whitespace-nowrap text-[#1b1b1f]">
         HOANG HENRY
       </p>
     </div>

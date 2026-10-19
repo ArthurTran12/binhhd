@@ -4,7 +4,7 @@ import ImagePlaceholder from "@/components/ui/ImagePlaceholder";
 export default function Showcase() {
   if (showcaseBanner.image) {
     return (
-      <section className="container-page py-6">
+      <section className="container-page pt-2.5">
         <ImagePlaceholder
           src={showcaseBanner.image}
           alt={showcaseBanner.alt}
@@ -19,7 +19,7 @@ export default function Showcase() {
 
   const [large, topRight, bottomRight, smallLeft, smallRight] = showcaseImages;
   return (
-    <section className="container-page py-6">
+    <section className="container-page pt-2.5">
       {/* Mobile: dải ảnh ngang thấp (3 ảnh đầu) */}
       <div className="grid h-28 grid-cols-[2fr_1fr_1fr] gap-1.5 md:hidden">
         <ImagePlaceholder src={large.image} alt={large.alt} priority sizes="50vw" />
