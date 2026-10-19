@@ -63,16 +63,21 @@ export default function About() {
       />
 
       <div className="mt-12 grid gap-6 md:grid-cols-2">
-        <div className="relative">
+        {/* Ảnh avatar đã có sẵn góc bo trang trí. Khi chưa có ảnh thì vẽ góc bằng CSS. */}
+        <div className="relative self-center">
           <ImagePlaceholder
             src={profile.avatar}
             alt="Avatar / Portrait"
+            fit="contain"
             sizes="(min-width:768px) 50vw, 100vw"
-            className="aspect-square rounded-xl md:aspect-auto md:h-full md:min-h-[400px]"
+            className="aspect-[783/710] rounded-xl"
           />
-          {/* Góc bo trang trí như thiết kế */}
-          <div aria-hidden className="pointer-events-none absolute -top-px -left-px h-20 w-20 rounded-br-[60px] border-r-[14px] border-b-[14px] border-bg" />
-          <div aria-hidden className="pointer-events-none absolute -right-px -bottom-px h-20 w-20 rounded-tl-[60px] border-t-[14px] border-l-[14px] border-bg" />
+          {!profile.avatar && (
+            <>
+              <div aria-hidden className="pointer-events-none absolute -top-px -left-px h-20 w-20 rounded-br-[60px] border-r-[14px] border-b-[14px] border-bg" />
+              <div aria-hidden className="pointer-events-none absolute -right-px -bottom-px h-20 w-20 rounded-tl-[60px] border-t-[14px] border-l-[14px] border-bg" />
+            </>
+          )}
         </div>
 
         <div className="flex flex-col gap-4">

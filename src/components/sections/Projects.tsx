@@ -36,7 +36,8 @@ export default function Projects() {
               src={p.image}
               alt={p.title}
               sizes="(min-width:1024px) 33vw, (min-width:640px) 50vw, 100vw"
-              className="aspect-[4/3] rounded-lg transition-transform duration-300 group-hover:scale-[1.02]"
+              fit="contain"
+              className="aspect-[499/389] transition-transform duration-300 group-hover:scale-[1.02]"
             />
             <div className="mt-3 flex items-start justify-between gap-4 max-sm:flex-col max-sm:gap-3">
               <h3 className="text-xs leading-snug text-white/80 group-hover:text-white max-sm:text-sm">{p.title}</h3>

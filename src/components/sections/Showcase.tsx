@@ -9,8 +9,9 @@ export default function Showcase() {
           src={showcaseBanner.image}
           alt={showcaseBanner.alt}
           priority
+          fit="contain"
           sizes="(min-width:1200px) 1200px, 100vw"
-          className="aspect-[1596/512] rounded-md"
+          className="aspect-[1596/512]"
         />
       </section>
     );
