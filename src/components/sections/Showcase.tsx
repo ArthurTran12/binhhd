@@ -1,7 +1,21 @@
-import { showcaseImages } from "@/data/portfolio";
+import { showcaseBanner, showcaseImages } from "@/data/portfolio";
 import ImagePlaceholder from "@/components/ui/ImagePlaceholder";
 
 export default function Showcase() {
+  if (showcaseBanner.image) {
+    return (
+      <section className="container-page py-6">
+        <ImagePlaceholder
+          src={showcaseBanner.image}
+          alt={showcaseBanner.alt}
+          priority
+          sizes="(min-width:1200px) 1200px, 100vw"
+          className="aspect-[1596/512] rounded-md"
+        />
+      </section>
+    );
+  }
+
   const [large, topRight, bottomRight, smallLeft, smallRight] = showcaseImages;
   return (
     <section className="container-page py-6">

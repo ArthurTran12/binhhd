@@ -14,7 +14,7 @@ export const profile = {
   email: "binhhoangduc21599@gmail.com",
   phone: "0966 513 696",
   cvUrl: "/cv.pdf",
-  avatar: "", // ví dụ: "/images/about/avatar.jpg"
+  avatar: "/images/avatar.png",
   socials: [
     { label: "Facebook", href: "#", icon: "facebook" },
     { label: "Twitter", href: "#", icon: "twitter" },
@@ -42,7 +42,10 @@ export const skills = [
   "Wireframe Design",
 ];
 
-/** Lưới ảnh ở phần showcase dưới hero (5 ô) */
+/** Ảnh banner ghép sẵn dưới hero. Có banner thì hiện banner, để "" thì dùng lưới 5 ô bên dưới. */
+export const showcaseBanner = { image: "/images/banner.png", alt: "UI/UX design showcase" };
+
+/** Lưới ảnh ở phần showcase dưới hero (5 ô) — chỉ dùng khi showcaseBanner.image để trống */
 export const showcaseImages: { image: string; alt: string }[] = [
   { image: "", alt: "Showcase large" }, // ô lớn bên trái
   { image: "", alt: "Showcase top right" },
@@ -97,10 +100,10 @@ export type Project = {
 };
 
 export const projects: Project[] = [
-  { title: "Project & Task Management Dashboard", image: "", href: "#" },
-  { title: "Work Mate - UI HR Management & Task Management", image: "", href: "#" },
-  { title: "Fonoforge - AI Voice & Video Generator App UI", image: "", href: "#" },
-  { title: "ActiveStep - Step Tracker App UX Case Study", image: "", href: "#" },
-  { title: "Alipay - EWallet App Figma Template", image: "", href: "#" },
-  { title: "Modavo - Multipurpose WooCommerce", image: "", href: "#" },
+  { title: "Project & Task Management Dashboard", image: "/images/projects/1.png", href: "#" },
+  { title: "Work Mate - UI HR Management & Task Management", image: "/images/projects/2.png", href: "#" },
+  { title: "Fonoforge - AI Voice & Video Generator App UI", image: "/images/projects/3.png", href: "#" },
+  { title: "ActiveStep - Step Tracker App UX Case Study", image: "/images/projects/4.png", href: "#" },
+  { title: "Alipay - EWallet App Figma Template", image: "/images/projects/5.png", href: "#" },
+  { title: "Modavo - Multipurpose WooCommerce", image: "/images/projects/6.png", href: "#" },
 ];
