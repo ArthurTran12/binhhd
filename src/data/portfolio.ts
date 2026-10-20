@@ -43,7 +43,10 @@ export const skills = [
 ];
 
 /** Ảnh banner ghép sẵn dưới hero. Có banner thì hiện banner, để "" thì dùng lưới 5 ô bên dưới. */
-export const showcaseBanner = { image: "/images/banner.png", alt: "UI/UX design showcase" };
+export const showcaseBanner = {
+  image: "/images/banner.png",
+  alt: "UI/UX design showcase",
+};
 
 /** Lưới ảnh ở phần showcase dưới hero (5 ô) — chỉ dùng khi showcaseBanner.image để trống */
 export const showcaseImages: { image: string; alt: string }[] = [
@@ -79,14 +82,15 @@ export const experiences: Experience[] = [
           "Led research and development and UI/UX design for an innovative Web3 digital banking ecosystem. Designed secure, transparent, and user-friendly financial interfaces for crypto/fiat management, cross-border payments, and asset tracking, and launched an integrated Telegram Mini App.",
       },
       {
-        title: "PLUGILO - AI-Powered Product Discovery & Social Commerce Platform",
+        title:
+          "PLUGILO - AI-Powered Product Discovery & Social Commerce Platform",
         description:
           "Designed a data-driven social commerce experience that leverages Artificial Intelligence to revolutionize how consumers search, compare, and discover products online, leading to over 50,000+ downloads on the App Store.",
       },
       {
         title: "EVSAFE - Smart EV Charging Network & Station Management System",
         description:
-          "Thiết kế toàn bộ trải nghiệm người dùng cho hệ thống trạm sạc xe điện, từ tìm trạm sạc theo thời gian thực, đặt chỗ, quản lý tiến trình sạc đến thanh toán, cùng Zalo Mini App giúp tài xế quét mã sạc nhanh.",
+          "Architected a complete mobile user experience for an end-to-end Electric Vehicle charging infrastructure serving both electric cars and motorbikes. Designed seamless interactive maps for station discovery, real-time charger availability, automated booking, live charging session telemetry, and flexible digital payments. Developed a lightweight Zalo Mini App alongside the native application to enable instant scan-to-charge functionality for casual drivers without requiring a full app installation.",
       },
     ],
   },
@@ -97,7 +101,8 @@ export const experiences: Experience[] = [
       "Served as Senior UI/UX Designer, taking charge of end-to-end design execution and business process analysis. Led the research, feature architecture, and product design for digital banking transformation initiatives and cryptocurrency/digital currency platforms, bridging complex financial logic into intuitive, secure user experiences.",
     projects: [
       {
-        title: "Foundation - Digital Currency & Crypto Asset Management Platform",
+        title:
+          "Foundation - Digital Currency & Crypto Asset Management Platform",
         description:
           "Spearheaded the UI/UX architecture and business requirement analysis for Foundation, a digital currency trading and crypto asset management platform. Designed robust financial workflows, secure digital wallet interfaces, real-time market data visualization, and seamless transaction execution systems to ensure a highly intuitive and trusted user experience for cryptocurrency investors.",
       },
@@ -148,10 +153,34 @@ export const allWorksUrl = "https://www.behance.net/hoangbinh21/projects";
 const behance = (path: string) => `https://www.behance.net/gallery/${path}`;
 
 export const projects: Project[] = [
-  { title: "Project & Task Management Dashboard", image: "/images/projects/1.png", href: behance("219180865/Project-Task-Management-Dashboard-UI-KIT") },
-  { title: "Work Mate - UI HR Management & Task Management", image: "/images/projects/2.png", href: behance("212559635/Work-Mate-UI-HR-Management-Task-Management") },
-  { title: "Fonoforge - AI Voice & Video Generator App UI", image: "/images/projects/3.png", href: behance("197692081/AI-Voice-Video-Generator-App-UI") },
-  { title: "ActiveStep - Step Tracker App UX Case Study", image: "/images/projects/4.png", href: behance("212560497/ActiveStep-Step-Traker-App-UX-Case-Study") },
-  { title: "Alipay - EWallet App Figma Template", image: "/images/projects/5.png", href: allWorksUrl /* chưa có trên Behance */ },
-  { title: "Modavo - Multipurpose WooCommerce", image: "/images/projects/6.png", href: behance("219275461/Multipurpose-WooCommerce") },
+  {
+    title: "Project & Task Management Dashboard",
+    image: "/images/projects/1.png",
+    href: behance("219180865/Project-Task-Management-Dashboard-UI-KIT"),
+  },
+  {
+    title: "Work Mate - UI HR Management & Task Management",
+    image: "/images/projects/2.png",
+    href: behance("212559635/Work-Mate-UI-HR-Management-Task-Management"),
+  },
+  {
+    title: "Fonoforge - AI Voice & Video Generator App UI",
+    image: "/images/projects/3.png",
+    href: behance("197692081/AI-Voice-Video-Generator-App-UI"),
+  },
+  {
+    title: "ActiveStep - Step Tracker App UX Case Study",
+    image: "/images/projects/4.png",
+    href: behance("212560497/ActiveStep-Step-Traker-App-UX-Case-Study"),
+  },
+  {
+    title: "Alipay - EWallet App Figma Template",
+    image: "/images/projects/5.png",
+    href: allWorksUrl /* chưa có trên Behance */,
+  },
+  {
+    title: "Modavo - Multipurpose WooCommerce",
+    image: "/images/projects/6.png",
+    href: behance("219275461/Multipurpose-WooCommerce"),
+  },
 ];
