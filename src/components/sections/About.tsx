@@ -52,6 +52,8 @@ export function ContactInfo() {
               key={s.label}
               href={s.href}
               aria-label={s.label}
+              target="_blank"
+              rel="noopener noreferrer"
               className={iconCircle}
             >
               <SocialIcon name={s.icon} />
@@ -67,7 +69,7 @@ export function ContactInfo() {
         <Button
           href={profile.cvUrl}
           className="w-full sm:w-auto sm:min-w-[120px] lg:min-w-[150px]"
-          download
+          download={profile.cvFileName}
         >
           Download CV
         </Button>

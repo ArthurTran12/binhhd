@@ -14,11 +14,13 @@ export const profile = {
   email: "binhhoangduc21599@gmail.com",
   phone: "0966 513 696",
   cvUrl: "/cv.pdf",
+  /** Tên file khi tải CV về */
+  cvFileName: "CV_UIUX_Design_HoangDucBinh.pdf",
   avatar: "/images/avatar.png",
   socials: [
-    { label: "Facebook", href: "#", icon: "facebook" },
-    { label: "Twitter", href: "#", icon: "twitter" },
-    { label: "LinkedIn", href: "#", icon: "linkedin" },
+    { label: "Behance", href: "https://www.behance.net/hoangbinh21/projects", icon: "behance" },
+    { label: "Facebook", href: "https://www.facebook.com/hoangduc.binh.39/", icon: "facebook" },
+    { label: "LinkedIn", href: "https://www.linkedin.com/in/hoàng-bình-08653021a/", icon: "linkedin" },
   ] as const,
 };
 
